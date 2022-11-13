@@ -1,2 +1,2 @@
 # QA-fazztrack
-ini tugas 3
+ini tugas pertemuan 3
