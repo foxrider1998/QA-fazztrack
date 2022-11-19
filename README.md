@@ -1,2 +1,2 @@
 # QA-fazztrack
-ini tugas pertemuan 3
+ini tugas minggu 3 sesi 1
