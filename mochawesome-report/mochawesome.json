@@ -1,0 +1,291 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-02T09:22:15.589Z",
+    "end": "2022-12-02T09:22:15.650Z",
+    "duration": 61,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "38aff622-e782-4cfc-988b-e44b4f12c71d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31660964-a5d8-4617-a8aa-625f703f420f",
+          "title": "[@editUsertest]Edit User API Test",
+          "fullFile": "/home/aris/Desktop/git/qa/QA-fazztrack/testcase/editUser.js",
+          "file": "/testcase/editUser.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"[@editUsertest]Edit User API Test\"",
+              "fullTitle": "[@editUsertest]Edit User API Test \"before all\" hook in \"[@editUsertest]Edit User API Test\"",
+              "timedOut": false,
+              "duration": 17,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('Before Hook , Input User Data');\nlet response = await api.postUser(bodyRequestData);\ndataEditUser.declareUserId = response.body.id; // menyimpan id ke dataEditUser.js\nexpect(response.status).to.equal(200);",
+              "err": {},
+              "uuid": "a4184d88-db56-44dd-8169-6cd34c615f39",
+              "parentUUID": "31660964-a5d8-4617-a8aa-625f703f420f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"[@editUsertest]Edit User API Test\"",
+              "fullTitle": "[@editUsertest]Edit User API Test \"after all\" hook in \"[@editUsertest]Edit User API Test\"",
+              "timedOut": false,
+              "duration": 2,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('After hook, Delete User');\nresponse = await api.deleteUser(dataEditUser.declareUserId);\nexpect(response.status).to.equal(200);",
+              "err": {},
+              "uuid": "8a845069-8c71-40cb-aa2e-1960c68ff99d",
+              "parentUUID": "31660964-a5d8-4617-a8aa-625f703f420f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "[@positive-editUser] User Succsesfully updated data Occupation and Nationality",
+              "fullTitle": "[@editUsertest]Edit User API Test [@positive-editUser] User Succsesfully updated data Occupation and Nationality",
+              "timedOut": false,
+              "duration": 5,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let response = await api.putUser(dataEditUser.editOccupationAndNationality(dataEditUser.declareUserId))\nexpect(response.status).to.equal(200);\nexpect(response.body.occupation).not.to.equal(bodyRequestData.occupation);\nexpect(response.body.occupation).not.to.equal(bodyRequestData.occupation);\nexpect(response.body).has.jsonSchema(jsonSchemas.editOccupationAndNationality);",
+              "err": {},
+              "uuid": "936aa778-0566-4993-8749-ae1736b3f53d",
+              "parentUUID": "31660964-a5d8-4617-a8aa-625f703f420f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[@negative-ageIsZero] User Failed to Update Data When Age is Zero  ",
+              "fullTitle": "[@editUsertest]Edit User API Test [@negative-ageIsZero] User Failed to Update Data When Age is Zero  ",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let response = await api.putUser(dataEditUser.ageIsZero);\nexpect(response.status).to.equal(400);\nexpect(response.body.errorCode).to.equal(\"ER-03\");\nexpect(response.body.message).to.equal('you must specify data for firstname, lastName, age, occupation, nationality, hobbies (at least 1), and gender');\nexpect(response.body).has.jsonSchema(jsonSchemas.ageIsZero);",
+              "err": {},
+              "uuid": "e09667cf-30b7-4993-9b93-ec0a95ccf8b2",
+              "parentUUID": "31660964-a5d8-4617-a8aa-625f703f420f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[@negative-arrayIsEmpty] User Failed To Update Data When Array is Empty",
+              "fullTitle": "[@editUsertest]Edit User API Test [@negative-arrayIsEmpty] User Failed To Update Data When Array is Empty",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let response = await api.putUser(dataEditUser.arrayIsEmpty);\nexpect(response.status).to.equal(400);\nexpect(response.body.errorCode).to.equal(\"ER-03\");\nexpect(response.body.message).to.equal('you must specify data for firstname, lastName, age, occupation, nationality, hobbies (at least 1), and gender');\nexpect(response.body).has.jsonSchema(jsonSchemas.arrayIsEmpty);",
+              "err": {},
+              "uuid": "9e9e0b38-fdfa-4f53-b6b7-82daea7b89ed",
+              "parentUUID": "31660964-a5d8-4617-a8aa-625f703f420f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[@negative-idIsNull] User Failed To Update Data When Id Is Null",
+              "fullTitle": "[@editUsertest]Edit User API Test [@negative-idIsNull] User Failed To Update Data When Id Is Null",
+              "timedOut": false,
+              "duration": 3,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let response = await api.putUser(dataEditUser.idIsNull);\nexpect(response.status).to.equal(404);\nexpect(response.body.errorCode).to.equal(\"ER-01\");\nexpect(response.body.message).to.equal(\"user not found\");\nexpect(response.body).has.jsonSchema(jsonSchemas.idIsNull);",
+              "err": {},
+              "uuid": "4ef753c6-5af2-4073-88a8-fdd2e4b133e9",
+              "parentUUID": "31660964-a5d8-4617-a8aa-625f703f420f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "936aa778-0566-4993-8749-ae1736b3f53d",
+            "e09667cf-30b7-4993-9b93-ec0a95ccf8b2",
+            "9e9e0b38-fdfa-4f53-b6b7-82daea7b89ed",
+            "4ef753c6-5af2-4073-88a8-fdd2e4b133e9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "355f3166-f1f0-4540-8ef3-68ee60259499",
+          "title": "[@getUserTest]Get User API Test",
+          "fullFile": "/home/aris/Desktop/git/qa/QA-fazztrack/testcase/getUser.js",
+          "file": "/testcase/getUser.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"[@getUserTest]Get User API Test\"",
+              "fullTitle": "[@getUserTest]Get User API Test \"before all\" hook in \"[@getUserTest]Get User API Test\"",
+              "timedOut": false,
+              "duration": 4,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('Before Hook, Input User Data');\nlet response = await api.postUser(bodyRequestData);\ndataEditUser.declareUserId = response.body.id\nexpect(response.status).to.equal(200);",
+              "err": {},
+              "uuid": "d41bd765-f666-41ed-baf3-aaf33682a167",
+              "parentUUID": "355f3166-f1f0-4540-8ef3-68ee60259499",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"[@getUserTest]Get User API Test\"",
+              "fullTitle": "[@getUserTest]Get User API Test \"after all\" hook in \"[@getUserTest]Get User API Test\"",
+              "timedOut": false,
+              "duration": 3,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('After Hook,Delete User Data')\nlet response = await api.deleteUser(dataEditUser.declareUserId);\nexpect(response.status).to.equal(200);",
+              "err": {},
+              "uuid": "0a3c76a8-87fa-4794-8999-6852b738df59",
+              "parentUUID": "355f3166-f1f0-4540-8ef3-68ee60259499",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "[@positive-getUser] Get User Data with Valid Id",
+              "fullTitle": "[@getUserTest]Get User API Test [@positive-getUser] Get User Data with Valid Id",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let response = await api.getUserbyId(dataEditUser.declareUserId);\nexpect(response.status).to.equal(200);\nexpect(response.body.id).to.equal(dataEditUser.declareUserId);\nexpect(response.body).has.jsonSchema(jsonSchemas.getUser);",
+              "err": {},
+              "uuid": "cb335731-6fe9-4236-86fb-67bed3037b63",
+              "parentUUID": "355f3166-f1f0-4540-8ef3-68ee60259499",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[@negative-getUser] Get User Data With invalid Id",
+              "fullTitle": "[@getUserTest]Get User API Test [@negative-getUser] Get User Data With invalid Id",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let response = await api.getUserbyId('pastierror');\nexpect(response.status).to.equal(404);\nexpect(response.body.errorCode).to.equal('ER-01');\nexpect(response.body.message).to.equal('user not found');\nexpect(response.body).has.jsonSchema(jsonSchemas.invalidUserId);",
+              "err": {},
+              "uuid": "efacdfd2-c472-4d90-91d7-f025bb46afce",
+              "parentUUID": "355f3166-f1f0-4540-8ef3-68ee60259499",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cb335731-6fe9-4236-86fb-67bed3037b63",
+            "efacdfd2-c472-4d90-91d7-f025bb46afce"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
