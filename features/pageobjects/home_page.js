@@ -56,7 +56,7 @@ class HomePage extends Page {
     async actionLogout () {
         await this.logout.waitForDisplayed(3000)
         await this.logout.click();
-        await LoginPage.modalLogin.waitForDisplayed();
+        await LoginPage.modalLogin.waitForDisplayed(3000);
     }
 
     async openCategorie(cat){

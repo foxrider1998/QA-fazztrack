@@ -8,7 +8,7 @@ const pageobjects = {
     home : HomePage
 }
 
-Given(/^I am on the /, async () => {
+Given(/^I am on the index page$/, async () => {
 
     await LoginPage.index()
 });
