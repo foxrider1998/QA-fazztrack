@@ -1,5 +1,6 @@
-# QA-fazztrack
-to run it just copy steps below  one by one 
+# QA-fazztrack tugas week 6 
+![alt text](https://github.com/foxrider1998/QA-fazztrack/blob/demoqa/runned.png?raw=true)
+
 
 
 
@@ -25,4 +26,3 @@ for displaying reports, use
 npm run allure-report 
 ```
 
-![alt text](https://github.com/foxrider1998/QA-fazztrack/blob/demoqa/runned.png?raw=true)
