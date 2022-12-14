@@ -1,0 +1,142 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1670998765100' stop='1670998789758'>
+    <name>demoqa</name>
+    <title>demoqa</title>
+    <test-cases>
+        <test-case start='1670998765160' status='broken' stop='1670998789707'>
+            <name>Action to buttons</name>
+            <title>Action to buttons</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='demoqa'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.94'/>
+            </parameters>
+            <steps>
+                <step start='1670998765170' status='broken' stop='1670998789707'>
+                    <name>Given I am on the first page</name>
+                    <title>Given I am on the first page</title>
+                    <attachments>
+                        <attachment title='Console Logs' source='8cf7376f-cde2-4020-86b4-30a0be90a547-attachment.html' type='text/html' size='350'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1670998789708' status='canceled' stop='1670998789709'>
+                    <name>When I open elements</name>
+                    <title>When I open elements</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789710' status='canceled' stop='1670998789710'>
+                    <name>When I choose buttons</name>
+                    <title>When I choose buttons</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789710' status='canceled' stop='1670998789710'>
+                    <name>When I choose click</name>
+                    <title>When I choose click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789711' status='canceled' stop='1670998789711'>
+                    <name>When I choose double click</name>
+                    <title>When I choose double click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789711' status='canceled' stop='1670998789712'>
+                    <name>When I choose right click</name>
+                    <title>When I choose right click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>RequestError: socket hang up</message>
+                <stack-trace>RequestError: socket hang up
+                    at ClientRequest.&lt;anonymous> (file:///home/aris/Documents/ccmber/node_modules/got/dist/source/core/index.js:789:107)
+                    at Object.onceWrapper (node:events:628:26)
+                    at ClientRequest.emit (node:events:525:35)
+                    at ClientRequest.emit (node:domain:489:12)
+                    at Socket.socketOnEnd (node:_http_client:518:9)
+                    at Socket.emit (node:events:525:35)
+                    at Socket.emit (node:domain:489:12)
+                    at endReadableNT (node:internal/streams/readable:1359:12)
+                    at connResetException (node:internal/errors:711:14)
+                    at Socket.socketOnEnd (node:_http_client:518:23)
+                    at Socket.emit (node:events:525:35)
+                    at Socket.emit (node:domain:489:12)
+                    at endReadableNT (node:internal/streams/readable:1359:12)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1670998789718' status='broken' stop='1670998789750'>
+            <name>Drag and drop</name>
+            <title>Drag and drop</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='demoqa'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.94'/>
+            </parameters>
+            <steps>
+                <step start='1670998789720' status='broken' stop='1670998789750'>
+                    <name>Given I am on the first page</name>
+                    <title>Given I am on the first page</title>
+                    <attachments>
+                        <attachment title='Console Logs' source='c662c27d-f3fb-4ec1-899b-22fda8c0a249-attachment.html' type='text/html' size='319'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1670998789751' status='canceled' stop='1670998789752'>
+                    <name>When I open interact</name>
+                    <title>When I open interact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789754' status='canceled' stop='1670998789754'>
+                    <name>When I choose droppable</name>
+                    <title>When I choose droppable</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789754' status='canceled' stop='1670998789755'>
+                    <name>When I interacting drag and drop</name>
+                    <title>When I interacting drag and drop</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670998789755' status='canceled' stop='1670998789755'>
+                    <name>Then Confirm droped on drop area</name>
+                    <title>Then Confirm droped on drop area</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>RequestError: connect ECONNREFUSED ::1:9515</message>
+                <stack-trace>RequestError: connect ECONNREFUSED ::1:9515
+                    at ClientRequest.&lt;anonymous> (file:///home/aris/Documents/ccmber/node_modules/got/dist/source/core/index.js:789:107)
+                    at Object.onceWrapper (node:events:628:26)
+                    at ClientRequest.emit (node:events:525:35)
+                    at ClientRequest.emit (node:domain:489:12)
+                    at Socket.socketErrorListener (node:_http_client:494:9)
+                    at Socket.emit (node:events:513:28)
+                    at Socket.emit (node:domain:489:12)
+                    at emitErrorNT (node:internal/streams/destroy:151:8)
+                    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+                    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

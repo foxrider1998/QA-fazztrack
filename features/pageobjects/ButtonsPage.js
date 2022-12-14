@@ -6,51 +6,59 @@ class ButtonPage extends Page {
     /**
      * define selectors using getter methods
      */
-     btnDoubleClick() {
+    get btnDoubleClick() {
         return $('#doubleClickBtn');
     }
 
-     btnClickMe() {
+    get btnClickMe() {
         return $(`//button[.='Click Me']`);
     }
 
-     btnRightClick() {
+    get btnRightClick() {
         return $('#rightClickBtn');
     }
 
-     get messageClick(){
+    get messageClick() {
         return $(`#dynamicClickMessage`);
     }
-    get messageRightClick(){
+    get messageRightClick() {
         return $(`#rightClickMessage`);
     }
-    get messageDoubleClick(){
+    get messageDoubleClick() {
         return $(`#doubleClickMessage`);
     }
 
     async actionBtnClick() {
-        await this.btnClickMe().scrollIntoView({ block: 'center', inline: 'center' });
-        await this.btnClickMe().click();
+        await this.btnClickMe.scrollIntoView({
+            block: 'center',
+            inline: 'center'
+        });
+        await this.btnClickMe.click();
     }
-    async verivyclickmessage(){
-         expect(await this.messageClick.getText()).toEqual("You have done a dynamic click")
+    async verivyclickmessage() {
+        expect(await this.messageClick.getText()).toEqual("You have done a dynamic click")
     }
 
 
     async actionBtnDoubleClick() {
-        await this.btnDoubleClick().doubleClick();
+        await this.btnDoubleClick.doubleClick();
     }
-    async verivyDoubleClickMessage(){
-       await this.messageDoubleClick.scrollIntoView({ block: 'center', inline: 'center' });
-         expect(await this.messageDoubleClick.getText()).toEqual("You have done a double click")
+    async verivyDoubleClickMessage() {
+        await this.messageDoubleClick.scrollIntoView({
+            block: 'center',
+            inline: 'center'
+        });
+        expect(await this.messageDoubleClick.getText()).toEqual("You have done a double click")
     }
 
 
     async actionBtnRightClick() {
-        await this.btnRightClick().click({button: 'right'});
+        await this.btnRightClick.click({
+            button: 'right'
+        });
     }
-    async verivyRightClickMessage(){
-         expect(await this.messageRightClick.getText()).toEqual("You have done a right click")
+    async verivyRightClickMessage() {
+        expect(await this.messageRightClick.getText()).toEqual("You have done a right click")
     }
 
 }

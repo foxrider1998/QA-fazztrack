@@ -11,14 +11,14 @@ class ElementsPage extends Page {
         return $(`//span[.='${_btn}']`);
     }
 
-    elementDrag(){
+    get  elementDrag(){
         return $(`#draggable`)
     }
-    elementDrop(){
+    get elementDrop(){
         return $(`#droppable`)
     }
     
-    droppedText(){
+    get droppedText(){
         return $(`#simpleDropContainer p`)
     }
 
@@ -29,19 +29,20 @@ class ElementsPage extends Page {
     }
 
     async actionbtnInteract() {
-        await this.btnInteract().scrollIntoView({ block: 'center', inline: 'center' });
-        await this.btnInteract().click();
+        await this.btnInteract.scrollIntoView({ block: 'center', inline: 'center' });
+        await this.btnInteract.click();
     }
 
     async dragingAndDrop(){
    
-        await this.elementDrag().scrollIntoView({ block: 'center', inline: 'center' })
-        await this.elementDrag().dragAndDrop( await this.elementDrop())
+        await this.elementDrag.scrollIntoView({ block: 'center', inline: 'center' })
+        await this.elementDrag.dragAndDrop( await this.elementDrop);
         // await browser.pause(5000)
     }
 
     async verifyDroped(){
-        expect(await this.droppedText().getText()).toEqual("Dropped!")
+        // expect(await this.droppedText().getText()).toEqual("Dropped!")
+    console.log(await this.elementDrop.getCSSProperty('color'));
     }
 }
 

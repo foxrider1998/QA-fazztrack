@@ -61,7 +61,9 @@ exports.config = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
-            args: ['--no-sandbox','--window-size=1920,1080','--disable-dev-shm-usage']
+            args: ['headless','--no-sandbox','--window-size=1920,1080','--disable-dev-shm-usage']
+       //     args: ['--no-sandbox','--window-size=1920,1080','--disable-dev-shm-usage']
+
     }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -137,7 +139,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+        disableMochaHooks:true,
+        addConsoleLogs: true,
+        useCucumberStepReporter: true
+    }]],
 
 
     //
@@ -235,8 +244,8 @@ exports.config = {
      * @param {String}                   uri      path to feature file
      * @param {GherkinDocument.IFeature} feature  Cucumber feature object
      */
-    // beforeFeature: function (uri, feature) {
-    // },
+    beforeFeature: function (uri, feature) {
+    console.log("this is before feature" )},
     /**
      *
      * Runs before a Cucumber Scenario.

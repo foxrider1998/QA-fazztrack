@@ -1,0 +1,112 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1670997492193' stop='1670997575629'>
+    <name>demoqa</name>
+    <title>demoqa</title>
+    <test-cases>
+        <test-case start='1670997492219' status='broken' stop='1670997552248'>
+            <name>Action to buttons</name>
+            <title>Action to buttons</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='demoqa'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.94'/>
+            </parameters>
+            <steps>
+                <step start='1670997492225' status='broken' stop='1670997552246'>
+                    <name>Given I am on the first page</name>
+                    <title>Given I am on the first page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997552249' status='canceled' stop='1670997552250'>
+                    <name>When I open elements</name>
+                    <title>When I open elements</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997552250' status='canceled' stop='1670997552251'>
+                    <name>When I choose buttons</name>
+                    <title>When I choose buttons</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997552252' status='canceled' stop='1670997552252'>
+                    <name>When I choose click</name>
+                    <title>When I choose click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997552254' status='canceled' stop='1670997552254'>
+                    <name>When I choose double click</name>
+                    <title>When I choose double click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997552255' status='canceled' stop='1670997552255'>
+                    <name>When I choose right click</name>
+                    <title>When I choose right click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: function timed out, ensure the promise resolves within 60000 milliseconds</message>
+                <stack-trace>Error: function timed out, ensure the promise resolves within 60000 milliseconds
+                    at Timeout.&lt;anonymous> (/home/aris/Documents/ccmber/node_modules/@cucumber/cucumber/lib/time.js:64:20)
+                    at listOnTimeout (node:internal/timers:564:17)
+                    at process.processTimers (node:internal/timers:507:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1670997552263' status='passed' stop='1670997575627'>
+            <name>Drag and drop</name>
+            <title>Drag and drop</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='feature' value='demoqa'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.94'/>
+            </parameters>
+            <steps>
+                <step start='1670997552268' status='passed' stop='1670997571068'>
+                    <name>Given I am on the first page</name>
+                    <title>Given I am on the first page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997571068' status='passed' stop='1670997571735'>
+                    <name>When I open interact</name>
+                    <title>When I open interact</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997571735' status='passed' stop='1670997571927'>
+                    <name>When I choose droppable</name>
+                    <title>When I choose droppable</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997571928' status='passed' stop='1670997572542'>
+                    <name>When I interacting drag and drop</name>
+                    <title>When I interacting drag and drop</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1670997572542' status='passed' stop='1670997575626'>
+                    <name>Then Confirm droped on drop area</name>
+                    <title>Then Confirm droped on drop area</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
