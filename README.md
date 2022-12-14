@@ -25,4 +25,4 @@ for displaying reports, use
 npm run allure-report 
 ```
 
-![alt text](https://github.com/foxrider1998/QA-fazztracg/blob/demoqa/runned.png?raw=true)
+![alt text](https://github.com/foxrider1998/QA-fazztrack/blob/demoqa/runned.png?raw=true)
